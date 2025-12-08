@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Manor - Oni-blooded staff, services, and roster.">
+  <title>The Manor | Team & Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="team">
+  <div class="noise"></div>
+  <div class="embers" aria-hidden="true"></div>
+  <div class="age-gate" id="ageGate" aria-modal="true" role="dialog">
+    <div class="age-gate__panel">
+      <div class="age-gate__crest">鬼</div>
+      <p class="age-gate__title">The Manor is an 18+ Oni indulgence.</p>
+      <p class="age-gate__copy">This experience is explicit and unapologetically lewd. By entering, you confirm you are 18+.</p>
+      <div class="age-gate__actions">
+        <button class="btn btn-primary" id="ageYes">Yes, I'm 18+</button>
+        <a class="btn btn-ghost" id="ageNo" href="https://www.esrb.org" rel="noopener">No, take me away</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <span class="brand__crest">
+        <img src="images/The_Manor_Logo_Keep.png" alt="The Manor crest">
+      </span>
+      <div>
+        <div class="brand__name">The Manor</div>
+        <div class="brand__tag">Open Lewd Oni Venue</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="venue.html" data-page="venue">Venue Details</a>
+      <a href="team.html" data-page="team" class="is-active">Team & Services</a>
+      <a href="menu.html" data-page="menu">Menu</a>
+      <a href="vip.html" data-page="vip">VIP Packages</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section band">
+      <div class="section__content">
+        <p class="eyebrow">Team & Services</p>
+        <h2>Curated talent, floor hosts, and specialists for every wager.</h2>
+        <p class="team-lead">House staff for decadent nights: stage hosts, VIP table service, private shows, and casino-floor charm crafted to keep your night unforgettable.</p>
+
+        <div class="staff-spotlight">
+          <div class="staff-spotlight__header">
+            <h3>Staff & Services</h3>
+            <p class="body">Click the strips to meet the creator.</p>
+          </div>
+          <div class="slice-wall" id="sliceWall" data-staff="freya"></div>
+        </div>
+
+      </div>
+    </section>
+
+        <div class="staff-modal" id="staffModal" role="dialog" aria-modal="true">
+      <div class="staff-modal__card">
+        <button class="staff-modal__close" id="staffModalClose" aria-label="Close">×</button>
+        <div class="staff-modal__media" id="staffProfileMedia" aria-hidden="true"></div>
+        <div class="staff-modal__body">
+          <h3 id="staffProfileName"></h3>
+          <div class="staff-fields">
+            <p><strong>Occupation:</strong> <span id="staffProfileRole"></span></p>
+            <p><strong>Pronouns:</strong> <span id="staffProfilePronouns"></span></p>
+            <p class="staff-sexuality"><strong>Sexuality:</strong> <span id="staffProfileSexuality"></span></p>
+          </div>
+          <div class="staff-tags" id="staffProfileTags"></div>
+          <p class="staff-likes"><strong>Likes:</strong> <span id="staffProfileLikes"></span></p>
+          <p class="staff-dislikes"><strong>Dislikes:</strong> <span id="staffProfileDislikes"></span></p>
+          <p id="staffProfileBio"></p>
+          <div class="staff-links staff-link">
+            <a id="staffProfileLink" href="#" target="_blank" rel="noopener">Portfolio / Socials</a>
+          </div>
+          <button class="btn btn-ghost staff-close-btn" type="button" id="staffProfileClose">Close</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="brand">
+      <span class="brand__crest">
+        <img src="images/The_Manor_Logo_Keep.png" alt="The Manor crest">
+      </span>
+      <div>
+        <div class="brand__name">The Manor</div>
+        <div class="brand__tag">Crimson, Gold, and Oni-blooded heat.</div>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="index.html">Home</a>
+      <a href="venue.html">Venue</a>
+      <a href="vip.html">VIP</a>
+    </div>
+    <div class="footer__note">18+ only &middot; Open Lewd &middot; Casino floor vibes &middot; Consent first &middot; Built for Eorzea's night crawlers.</div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
+
+
+
