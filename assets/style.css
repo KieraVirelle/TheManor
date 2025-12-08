@@ -1269,6 +1269,15 @@ body[data-page="vip"] .vip-tier {
   text-align: right;
 }
 
+.footer__note:last-of-type {
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer__note:last-of-type {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 .age-gate {
   position: fixed;
   inset: 0;
