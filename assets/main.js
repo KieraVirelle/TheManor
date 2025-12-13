@@ -99,6 +99,61 @@ const STAFF = [
     imagePosition: 'center 55%'
   },
   {
+    id: 'mouse-suzuki',
+    name: 'Mouse Suzuki',
+    role: 'Dancer / Court',
+    roleLabel: 'Court',
+    bio: 'Velvet-soft steps, precise lines, and a court smile that keeps the floor coming back for more.',
+    tags: ['Dancer', 'Court', 'Stage Performer'],
+    image: ['images/MOUSE.png'],
+    imagePosition: '50% 8%'
+  },
+  {
+    id: 'nyxi',
+    name: 'Nyxi Cinnabelle',
+    role: 'Courtesan',
+    roleLabel: 'Courtesan',
+    pronouns: 'She/Her',
+    bio: 'Dark, direct, and mirror-sharp—Nyxi moves with sinful intent, offering conversation, dancing, and indulgent company for those willing to pay the price.',
+    tags: ['Courtesan', 'Dark', 'Direct', 'Para', 'Mirror', 'Sinful', 'Demisexual', 'Submissive', 'Switch'],
+    sexuality: 'Heterosexual',
+    likes: 'Sins, conversations, dancing, seeing a smile curl the lips of all she meets.',
+    image: ['images/Nexi.png'],
+    imagePosition: 'center 22%'
+  },
+  {
+    id: 'alys',
+    name: 'Alys',
+    role: 'Bartender',
+    roleLabel: 'Bartender',
+    pronouns: 'She/Her',
+    sexuality: 'Straight',
+    bio: "Crafted by the music that booms around her, there is more than the drinks on the menu. Though not a court she is one by nature and will aim to please anyone who comes up to her domain. A bit shy? Don't worry, the bar is perfect for those that want casual interaction to roleplay immersion. Let the drinks she serves soothe you into a comfortable distraction and like the gambas you'll find, she's a risk you should heed caution. She didn't earn the title of Siren of the Bars for nothing.",
+    tags: ['Siren', 'Alcoholic Roleplay', 'Nightlife', 'Dancer'],
+    likes: 'Conversations, dancing, seeing a smile curl the lips of all she meets.',
+    image: ['images/Screenshot_2025-12-09_081544.png'],
+    imagePosition: 'center 30%'
+  },
+  {
+    id: 'siilica',
+    name: 'Siilica',
+    role: 'Shout Runner',
+    roleLabel: 'Shout Runner',
+    tags: ['Shout Runner', 'Nightlife'],
+    image: ['images/image.png'],
+    imagePosition: '50% 30%'
+  },
+  {
+    id: 'magnum-chan',
+    name: 'Magnum Chan',
+    role: 'Court',
+    roleLabel: 'Court',
+    pronouns: 'He/Him',
+    tags: ['Court'],
+    image: ['images/Magnum.webp'],
+    imagePosition: '50% 25%'
+  },
+  {
     id: 'kiera',
     name: 'Kiera Virelle',
     role: 'DJ Booking Manager',
