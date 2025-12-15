@@ -78,8 +78,8 @@ const STAFF = [
     image: ['images/FreyaGposer2.png']
   },
   {
-    id: 'sky-blue',
-    name: 'Sky Blue',
+    id: 'blaire',
+    name: 'Blaire',
     role: 'Photographer',
     roleLabel: 'Photographer',
     pronouns: 'She/Her',
