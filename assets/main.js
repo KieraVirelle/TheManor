@@ -174,6 +174,16 @@ const STAFF = [
 
 const OWNERS = [
   {
+    id: 'ennoch',
+    name: 'Ennoch',
+    role: 'Owner',
+    roleLabel: 'Owner',
+    bio: 'Owner',
+    tags: ['Owner'],
+    image: ['images/Ennoch.png'],
+    imagePosition: 'center 45%'
+  },
+  {
     id: 'kiera',
     name: 'Kiera Virelle',
     role: 'DJ Booking Manager',
@@ -181,7 +191,8 @@ const OWNERS = [
     pronouns: 'She/Her',
     bio: 'Bass is my love language. Crowds are my canvas. And the right DJ? My favorite temptation. If your music can command bodies and your presence can hold a room hostage - you already have my attention.',
     tags: ['Management', 'Sassy AF', 'Bass addict', 'Crowd alchemist', 'Nightlife ops'],
-    image: ['images/Kierayooo.png']
+    image: ['images/Kierayooo.png'],
+    imagePosition: 'center 45%'
   }
 ];
 
@@ -307,8 +318,8 @@ function initStaffProfile() {
 
     const img = getImage(entry);
     if (img) {
-      profileMedia.style.setProperty('--img', `url('../${img}')`);
-      profileMedia.style.backgroundImage = `linear-gradient(rgba(5,1,4,0.08), rgba(5,1,4,0.08)), url('../${img}')`;
+      profileMedia.style.setProperty('--img', `url('${img}')`);
+      profileMedia.style.backgroundImage = `linear-gradient(rgba(5,1,4,0.08), rgba(5,1,4,0.08)), url('${img}')`;
       profileMedia.style.backgroundPosition = getImagePosition(entry, 'center 20%');
     } else {
       profileMedia.style.removeProperty('--img');
