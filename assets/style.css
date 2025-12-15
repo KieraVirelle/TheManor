@@ -786,14 +786,15 @@ body[data-page="vip"] .vip-tier {
 
 .slice-wall {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
   margin-top: 1rem;
   cursor: pointer;
 }
 
 .slice {
-  height: 320px;
+  aspect-ratio: 1 / 1;
+  min-height: 220px;
   border-radius: 16px;
   background-image: linear-gradient(rgba(5,1,4,0.3), rgba(5,1,4,0.08)), var(--img, linear-gradient(145deg, rgba(193, 18, 31, 0.5), rgba(197, 138, 50, 0.35)));
   background-size: cover;
@@ -961,7 +962,7 @@ body[data-page="vip"] .vip-tier {
 
 @media (max-width: 900px) {
   .slice {
-    height: 240px;
+    min-height: 200px;
   }
   .staff-modal__card {
     grid-template-columns: 1fr;

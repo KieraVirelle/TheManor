@@ -7,6 +7,7 @@ const navLinks = document.querySelectorAll('.nav a[data-page]');
 const currentPage = document.body.dataset.page;
 const oniMask = document.querySelector('.oni-mask');
 const sliceWall = document.getElementById('sliceWall');
+const ownerWall = document.getElementById('ownerWall');
 const modal = document.getElementById('staffModal');
 const modalClose = document.getElementById('staffModalClose');
 const profileMedia = document.getElementById('staffProfileMedia');
@@ -66,7 +67,7 @@ const STAFF = [
     id: 'freya',
     name: 'Freyja Bloodmoon',
     role: 'Photographer / Gposer',
-    roleLabel: 'Gposer',
+    roleLabel: 'Photographer',
     pronouns: 'She/Her',
     bio: 'Moody Oni lens that worships nightlife, boudoir heat, and degen thrills.',
     tags: ['Moody', 'Gothic', 'Nightlife', 'Boudoir', 'Degen'],
@@ -77,49 +78,19 @@ const STAFF = [
     image: ['images/FreyaGposer2.png']
   },
   {
-    id: 'lucinda',
-    name: 'Lucinda Court',
-    role: 'Court / Dancer',
-    roleLabel: 'Court',
+    id: 'sky-blue',
+    name: 'Sky Blue',
+    role: 'Photographer',
+    roleLabel: 'Photographer',
     pronouns: 'She/Her',
-    bio: "Hi, I'm Luci! I've been venue-hopping and sometimes raiding on this game for five years now. I really love making characters and meeting new friends. Don't be afraid to shoot me a tell if there's anything I can do to make your night better.",
-    tags: ['Court', 'Dancer', 'Social'],
-    image: ['images/LucindaCourt2.png']
-  },
-  {
-    id: 'rayla',
-    name: 'Rayla Elakna',
-    role: 'Court / Dancer',
-    roleLabel: 'Court',
-    pronouns: 'She/Her',
-    bio: "Ello Lovelies, this is your Captain speaking (; I have my own Sky Crew of Privateers when I am away from the clubs. So long as I am helping people enjoy themselves and have fun then I am happy. I'm pretty sassy, fairly outgoing, and love drinking rum.",
-    tags: ['Sky Captain', 'Roleplay', 'Nightlife', 'Bratty/Sassy'],
-    link: 'https://raylaelakna.carrd.co/',
-    image: ['images/Raylapic2.png'],
-    imagePosition: 'center 55%'
-  },
-  {
-    id: 'mouse-suzuki',
-    name: 'Mouse Suzuki',
-    role: 'Dancer / Court',
-    roleLabel: 'Court',
-    bio: 'Velvet-soft steps, precise lines, and a court smile that keeps the floor coming back for more.',
-    tags: ['Dancer', 'Court', 'Stage Performer'],
-    image: ['images/MOUSE.png'],
-    imagePosition: '50% 8%'
-  },
-  {
-    id: 'nyxi',
-    name: 'Nyxi Cinnabelle',
-    role: 'Courtesan',
-    roleLabel: 'Courtesan',
-    pronouns: 'She/Her',
-    bio: 'Dark, direct, and mirror-sharp—Nyxi moves with sinful intent, offering conversation, dancing, and indulgent company for those willing to pay the price.',
-    tags: ['Courtesan', 'Dark', 'Direct', 'Para', 'Mirror', 'Sinful', 'Demisexual', 'Submissive', 'Switch'],
-    sexuality: 'Heterosexual',
-    likes: 'Sins, conversations, dancing, seeing a smile curl the lips of all she meets.',
-    image: ['images/Nexi.png'],
-    imagePosition: 'center 22%'
+    sexuality: 'Bisexual',
+    bio: 'Lens-first and lore-rich, Sky catches the sweet moments between heat and hush.',
+    tags: ['Photographer', 'Portraits', 'Nightlife'],
+    likes: 'Conversations, music, photography, sweet treats',
+    dislikes: 'Overstepping boundaries, liars, bitter things',
+    link: 'https://blairportfoliophotos.carrd.co/',
+    image: ['images/sky_blue.png'],
+    imagePosition: 'center 18%'
   },
   {
     id: 'alys',
@@ -137,33 +108,85 @@ const STAFF = [
   {
     id: 'siilica',
     name: 'Siilica',
-    role: 'Shout Runner',
-    roleLabel: 'Shout Runner',
-    tags: ['Shout Runner', 'Nightlife'],
+    role: 'Hype',
+    roleLabel: 'Hype',
+    tags: ['Hype', 'Nightlife'],
     image: ['images/image.png'],
     imagePosition: '50% 30%'
   },
   {
+    id: 'lucinda',
+    name: 'Lucinda Court',
+    role: 'Courtesan / Dancer',
+    roleLabel: 'Courtesan',
+    pronouns: 'She/Her',
+    bio: "Hi, I'm Luci! I've been venue-hopping and sometimes raiding on this game for five years now. I really love making characters and meeting new friends. Don't be afraid to shoot me a tell if there's anything I can do to make your night better.",
+    tags: ['Courtesan', 'Dancer', 'Social'],
+    image: ['images/LucindaCourt2.png'],
+    imagePosition: 'center 12%'
+  },
+  {
+    id: 'rayla',
+    name: 'Rayla Elakna',
+    role: 'Courtesan / Dancer',
+    roleLabel: 'Courtesan',
+    pronouns: 'She/Her',
+    bio: "Ello Lovelies, this is your Captain speaking (; I have my own Sky Crew of Privateers when I am away from the clubs. So long as I am helping people enjoy themselves and have fun then I am happy. I'm pretty sassy, fairly outgoing, and love drinking rum.",
+    tags: ['Sky Captain', 'Roleplay', 'Nightlife', 'Bratty/Sassy', 'Courtesan'],
+    link: 'https://raylaelakna.carrd.co/',
+    image: ['images/Raylapic2.png'],
+    imagePosition: 'center 55%'
+  },
+  {
+    id: 'mouse-suzuki',
+    name: 'Mouse Suzuki',
+    role: 'Dancer / Courtesan',
+    roleLabel: 'Courtesan',
+    bio: 'Velvet-soft steps, precise lines, and a court smile that keeps the floor coming back for more.',
+    tags: ['Dancer', 'Courtesan', 'Stage Performer'],
+    image: ['images/Mouse.png'],
+    imagePosition: '50% 8%'
+  },
+  {
+    id: 'nyxi',
+    name: 'Nyxi Cinnabelle',
+    role: 'Courtesan',
+    roleLabel: 'Courtesan',
+    pronouns: 'She/Her',
+    bio: 'Dark, direct, and mirror-sharp Nyxi moves with sinful intent, offering conversation, dancing, and indulgent company for those willing to pay the price.',
+    tags: ['Courtesan', 'Dark', 'Direct', 'Para', 'Mirror', 'Sinful', 'Demisexual', 'Submissive', 'Switch'],
+    sexuality: 'Heterosexual',
+    likes: 'Sins, conversations, dancing, seeing a smile curl the lips of all she meets.',
+    image: ['images/Nexi.png'],
+    imagePosition: 'center 22%'
+  },
+  {
     id: 'magnum-chan',
     name: 'Magnum Chan',
-    role: 'Court',
-    roleLabel: 'Court',
+    role: 'Courtesan',
+    roleLabel: 'Courtesan',
     pronouns: 'He/Him',
-    tags: ['Court'],
+    tags: ['Courtesan'],
     image: ['images/Magnum.webp'],
     imagePosition: '50% 25%'
-  },
+  }
+];
+
+const OWNERS = [
   {
     id: 'kiera',
     name: 'Kiera Virelle',
     role: 'DJ Booking Manager',
-    roleLabel: 'Booking',
+    roleLabel: 'DJ Booking Manager',
     pronouns: 'She/Her',
     bio: 'Bass is my love language. Crowds are my canvas. And the right DJ? My favorite temptation. If your music can command bodies and your presence can hold a room hostage - you already have my attention.',
-    tags: ['Sassy AF', 'Bass addict', 'Crowd alchemist', 'Nightlife ops'],
+    tags: ['Management', 'Sassy AF', 'Bass addict', 'Crowd alchemist', 'Nightlife ops'],
     image: ['images/Kierayooo.png']
   }
 ];
+
+const ALL_ENTRIES = [...STAFF, ...OWNERS];
+const ENTRY_MAP = new Map(ALL_ENTRIES.map(entry => [entry.id, entry]));
 
 function allowEntry() {
   localStorage.setItem(AGE_KEY, 'true');
@@ -211,7 +234,7 @@ function initOniParallax() {
 }
 
 function initStaffProfile() {
-  if (!sliceWall || !modal) return;
+  if (!modal) return;
 
   const getImage = (entry) => {
     if (!entry || !entry.image) return null;
@@ -223,31 +246,26 @@ function initStaffProfile() {
     return entry.imagePosition || fallback;
   };
 
-  const renderSlices = () => {
-    sliceWall.innerHTML = '';
-    const slots = Math.max(STAFF.length, 5);
-    for (let idx = 0; idx < slots; idx++) {
-      const entry = STAFF[idx];
+  const renderWall = (wallEl, entries) => {
+    if (!wallEl || !entries) return;
+    wallEl.innerHTML = '';
+    entries.forEach((entry, idx) => {
       const slice = document.createElement('div');
       slice.className = 'slice';
-      if (entry) {
-        slice.dataset.staffId = entry.id || `staff-${idx}`;
-        const img = getImage(entry);
-        if (img) slice.style.setProperty('--img', `url('../${img}')`);
-        const imgPos = getImagePosition(entry, 'center center');
-        if (imgPos) slice.style.setProperty('--img-pos', imgPos);
-        const label = document.createElement('span');
-        label.className = 'slice__label';
-        const name = entry.name || 'Staff';
-        const roleText = entry.roleLabel || entry.role || 'Staff';
-        const role = roleText ? roleText : '';
-        label.innerHTML = `<span class="slice__name">${name}</span>${role ? `<span class="slice__role">${role}</span>` : ''}`;
-        slice.appendChild(label);
-      } else {
-        slice.classList.add('slice--empty');
-      }
-      sliceWall.appendChild(slice);
-    }
+      slice.dataset.staffId = entry.id || `staff-${idx}`;
+      const img = getImage(entry);
+      if (img) slice.style.setProperty('--img', `url('../${img}')`);
+      const imgPos = getImagePosition(entry, 'center center');
+      if (imgPos) slice.style.setProperty('--img-pos', imgPos);
+      const label = document.createElement('span');
+      label.className = 'slice__label';
+      const name = entry.name || 'Staff';
+      const roleText = entry.roleLabel || entry.role || 'Staff';
+      const role = roleText ? roleText : '';
+      label.innerHTML = `<span class="slice__name">${name}</span>${role ? `<span class="slice__role">${role}</span>` : ''}`;
+      slice.appendChild(label);
+      wallEl.appendChild(slice);
+    });
   };
 
   const renderProfile = (entry) => {
@@ -301,16 +319,19 @@ function initStaffProfile() {
     modal.classList.add('is-open');
   };
 
-  sliceWall.addEventListener('click', evt => {
-    const slice = evt.target.closest('.slice');
-    if (!slice) return;
-    const id = slice.dataset.staffId;
-    const entry = STAFF.find(s => s.id === id);
-    if (entry) {
-      pingChipLoader();
-      renderProfile(entry);
-    }
-  });
+  const attachWallClick = (wallEl) => {
+    if (!wallEl) return;
+    wallEl.addEventListener('click', evt => {
+      const slice = evt.target.closest('.slice');
+      if (!slice) return;
+      const id = slice.dataset.staffId;
+      const entry = ENTRY_MAP.get(id);
+      if (entry) {
+        pingChipLoader();
+        renderProfile(entry);
+      }
+    });
+  };
 
   modal.addEventListener('click', evt => {
     if (evt.target === modal) {
@@ -324,7 +345,10 @@ function initStaffProfile() {
     profileCloseBtn.addEventListener('click', () => modal.classList.remove('is-open'));
   }
 
-  renderSlices();
+  renderWall(sliceWall, STAFF);
+  renderWall(ownerWall, OWNERS);
+  attachWallClick(sliceWall);
+  attachWallClick(ownerWall);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

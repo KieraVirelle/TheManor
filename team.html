@@ -54,9 +54,16 @@
         <div class="staff-spotlight">
           <div class="staff-spotlight__header">
             <h3>Staff & Services</h3>
-            <p class="body">Click the strips to meet the creator.</p>
+            <p class="body">Click a portrait tile to open their full details.</p>
           </div>
           <div class="slice-wall" id="sliceWall" data-staff="freya"></div>
+        </div>
+
+        <div class="staff-spotlight">
+          <div class="staff-spotlight__header">
+            <h3>Owners / Management</h3>
+          </div>
+          <div class="slice-wall" id="ownerWall" data-staff="kiera"></div>
         </div>
 
       </div>
@@ -64,7 +71,7 @@
 
         <div class="staff-modal" id="staffModal" role="dialog" aria-modal="true">
       <div class="staff-modal__card">
-        <button class="staff-modal__close" id="staffModalClose" aria-label="Close">×</button>
+        <button class="staff-modal__close" id="staffModalClose" aria-label="Close">X</button>
         <div class="staff-modal__media" id="staffProfileMedia" aria-hidden="true"></div>
         <div class="staff-modal__body">
           <h3 id="staffProfileName"></h3>
@@ -107,6 +114,4 @@
   <script src="assets/main.js"></script>
 </body>
 </html>
-
-
 
