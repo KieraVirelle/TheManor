@@ -144,8 +144,8 @@ const STAFF = [
     roleLabel: 'Courtesan',
     bio: 'Velvet-soft steps, precise lines, and a court smile that keeps the floor coming back for more.',
     tags: ['Dancer', 'Courtesan', 'Stage Performer'],
-    image: ['images/Mouse.png'],
-    imagePosition: '50% 8%'
+    image: ['images/Screenshot_2025-12-14_144949.png'],
+    imagePosition: 'center 20%'
   },
   {
     id: 'nyxi',
