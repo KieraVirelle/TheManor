@@ -79,12 +79,12 @@ const STAFF = [
   },
   {
     id: 'blaire',
-    name: 'Blaire',
+    name: 'Blair Aylin',
     role: 'Photographer',
     roleLabel: 'Photographer',
     pronouns: 'She/Her',
     sexuality: 'Bisexual',
-    bio: 'Lens-first and lore-rich, Sky catches the sweet moments between heat and hush.',
+    bio: 'Lens-first and lore-rich, Blair Aylin catches the sweet moments between heat and hush.',
     tags: ['Photographer', 'Portraits', 'Nightlife'],
     likes: 'Conversations, music, photography, sweet treats',
     dislikes: 'Overstepping boundaries, liars, bitter things',
@@ -265,9 +265,16 @@ function initStaffProfile() {
       slice.className = 'slice';
       slice.dataset.staffId = entry.id || `staff-${idx}`;
       const img = getImage(entry);
-      if (img) slice.style.setProperty('--img', `url('../${img}')`);
+      if (img) {
+        const bg = `linear-gradient(rgba(5,1,4,0.18), rgba(5,1,4,0.08)), url('${img}')`;
+        slice.style.setProperty('--img', `url('${img}')`);
+        slice.style.backgroundImage = bg;
+      }
       const imgPos = getImagePosition(entry, 'center center');
-      if (imgPos) slice.style.setProperty('--img-pos', imgPos);
+      if (imgPos) {
+        slice.style.setProperty('--img-pos', imgPos);
+        slice.style.backgroundPosition = imgPos;
+      }
       const label = document.createElement('span');
       label.className = 'slice__label';
       const name = entry.name || 'Staff';
